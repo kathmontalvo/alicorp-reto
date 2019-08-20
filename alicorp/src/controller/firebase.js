@@ -18,9 +18,11 @@ class Firebase {
     this.auth = app.auth();
     this.db = app.firestore();
   }
+
   login(email, password) {
     return this.auth.signInWithEmailAndPassword(email, password)
   }
+
   logout() {
     return this.auth.signOut()
   }
@@ -31,6 +33,7 @@ class Firebase {
       displayName: name
     })
   }
+  
   isInitialized() {
 		return new Promise(resolve => {
 			this.auth.onAuthStateChanged(resolve)
