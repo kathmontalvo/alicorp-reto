@@ -1,4 +1,5 @@
 import React, {useState}from "react";
+import firebase from '../../controller/firebase'
 
 function Login() {
   const [login, setlogin] = useState({
@@ -16,8 +17,8 @@ function Login() {
 
 const sendForm=(e)=>{
   e.preventDefault();
-
-  console.log(login)
+  firebase.login(login.email,login.password).then(a=>console.log(a))
+  
 }
 
 

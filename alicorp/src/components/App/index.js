@@ -8,7 +8,7 @@ import Home from '../Products';
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false)
-
+  
   useEffect(() => {
     firebase.isInitialized().then(val => {
       setFirebaseInitialized(val)
