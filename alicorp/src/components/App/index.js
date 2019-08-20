@@ -15,11 +15,12 @@ const App = () => {
     })
   })
 
+  
 
   return firebaseInitialized !== false ? (
     <Switch>
       <Route exact path="/" component={Login} />
-      {/* <Route exact path="/login" component={Login} /> */}
+      { <Route exact path="/login" component={Login} />}
       <Route exact path="/register" component={Register} />
       <Route exact path="/home" component={Home} />
     </Switch>
