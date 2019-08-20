@@ -22,7 +22,7 @@ const Principal = () => {
           <div class="carousel-item">
             <img class="d-block w-100" src="http://3.bp.blogspot.com/-8-_Xa8G3Tw0/V-iLfSA3p5I/AAAAAAAAAA4/cRasQZVQO-AvrsH2joN9Yh0a9Uvf6SBDACK4B/s1600/Screen-Shot-2014-05-22-at-11.51.55-AM%2B%25281%2529.png" alt=""></img>
           </div>
-                    <div class="carousel-item">
+            <div class="carousel-item">
             <img class="d-block w-100" src="https://s3-eu-west-1.amazonaws.com/rankia/images/valoraciones/0009/7966/Productos-Alicorp.jpg?1359712611" alt=""></img>
           </div>
         </div>
