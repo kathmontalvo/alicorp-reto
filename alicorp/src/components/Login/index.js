@@ -1,20 +1,10 @@
-import React ,{useState} from "react";
+import React from "react";
 
 function Login() {
-
-  const [login, setlogin] = useState({
+  /*const [login, setlogin] = useState({
     email: "",
     password: ""
-  });
-
-const handleChange=(e)=>{
-  setlogin({
-    ...login,
-    [e.target.name]: e.target.value
-  })
-  
-
-}
+  });*/
 
   return (
     <div>
