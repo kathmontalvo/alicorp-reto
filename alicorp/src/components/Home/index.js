@@ -5,6 +5,7 @@ import firebase from "../../controller/firebase";
 import Categories from './Categories/';
 import Products from './Products/';
 import Option from './Option'
+import Principal from './Principal/Principal';
 const Home = () => {
   const [name, setName] = useState("");
   const [type, setType] = useState('Desayuno')
@@ -16,6 +17,7 @@ const Home = () => {
   return (
     <main>
       <Header />
+      <Principal />
       <section>
         {/* slider imgs */}
         <div>

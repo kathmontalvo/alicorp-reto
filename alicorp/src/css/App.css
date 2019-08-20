@@ -1,7 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
 .containerLogin {
   display: flex;
   justify-content: center;
