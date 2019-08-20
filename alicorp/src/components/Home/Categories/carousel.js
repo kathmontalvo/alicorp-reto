@@ -22,7 +22,7 @@
 
 
   $('#carouselExample').carousel({
-    interval: 2000
+    interval: 500
   });
 
 
