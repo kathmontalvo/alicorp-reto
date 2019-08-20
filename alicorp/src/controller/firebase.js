@@ -40,7 +40,7 @@ class Firebase {
 		})
   }
    getProducts (){
-    return useCollection(this.db.collection("producto3"), {
+    return useCollection(this.db.collection("productos"), {
     snapshotListenOptions: { includeMetadataChanges: true }
   }); 
 }
