@@ -1,4 +1,4 @@
-  $('#carouselExample').on('slide.bs.carousel', function (e) {
+$('#carouselExample').on('slide.bs.carousel', function (e) {
 
 
     var $e = $(e.relatedTarget);
@@ -22,7 +22,7 @@
 
 
   $('#carouselExample').carousel({
-    interval: 2000
+    interval: 500
   });
 
 

@@ -7,7 +7,7 @@ const Header = () => (
     <Link to="/">
      <img
         data-testid="imgLogo"
-        style={{maxWidth: '50%'}}
+        style={{maxWidth:"20%" ,margin:"20px"}}
         className="logo"
         src="https://i.postimg.cc/3JC9pBnv/1280px-Alicorp.pnghttps://i.postimg.cc/3JC9pBnv/1280px-Alicorp.png"
         alt="logo"
