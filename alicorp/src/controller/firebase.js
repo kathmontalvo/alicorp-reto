@@ -28,16 +28,16 @@ class Firebase {
   }
 
   async register(name, email, password) {
-    try {
+    // try {
       if (name !== '') {
         await this.auth.createUserWithEmailAndPassword(email, password)
-        return this.auth.currentUser.updateProfile({
-          displayName: name
-        })
-      }
-    } catch (err) {
-      return err
-    }
+    //   }
+    // } catch (error) {
+    //   return error
+    // }
+    return this.auth.currentUser.updateProfile({
+      displayName: name
+    })}
   }
 
   isInitialized() {
