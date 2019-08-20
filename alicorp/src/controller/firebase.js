@@ -55,6 +55,11 @@ class Firebase {
       snapshotListenOptions: { includeMetadataChanges: true }
     })
   }
+  getOrders() {
+    return useCollection(this.db.collection("pedidos"), {
+      snapshotListenOptions: { includeMetadataChanges: true }
+    })
+  }
 
 }
 
