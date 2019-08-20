@@ -1,7 +1,7 @@
 import app from 'firebase/app';
 import 'firebase/auth';
 import 'firebase/firebase-firestore';
-
+import { useCollection } from "react-firebase-hooks/firestore";
 const config = {
   apiKey: "AIzaSyB6XEWyLg5E4b7y04d0lPi4hBReaV87z30",
   authDomain: "alicorp-900d0.firebaseapp.com",
@@ -35,7 +35,12 @@ class Firebase {
 		return new Promise(resolve => {
 			this.auth.onAuthStateChanged(resolve)
 		})
-	}
+  }
+   getProducts (){
+    return useCollection(this.db.collection("producto3"), {
+    snapshotListenOptions: { includeMetadataChanges: true }
+  }); 
+}
 }
 
 export default new Firebase();
