@@ -3,25 +3,7 @@ import { Link } from "react-router-dom";
 
 import "../css/header.css"
 
-<<<<<<< HEAD
-const Header = () => (
-  <header>
-    <Link to="/">
-     <img
-        data-testid="imgLogo"
-        style={{maxWidth:"20%" ,margin:"20px"}}
-        className="logo"
-        src="https://i.postimg.cc/3JC9pBnv/1280px-Alicorp.pnghttps://i.postimg.cc/3JC9pBnv/1280px-Alicorp.png"
-        alt="logo"
-      ></img>
-    </Link>
-  </header>
-);
-=======
-const Header = () => {
-  
- 
-    
+const Header = () => { 
   
 
   return (
@@ -69,5 +51,4 @@ const Header = () => {
     </header>
   );
 };
->>>>>>> c7c75db7efa19221de6a6e39f3b49979ae019541
 export default Header;
