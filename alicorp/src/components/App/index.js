@@ -4,7 +4,7 @@ import firebase from '../../controller/firebase'
 import Login from '../Login'
 import Register from '../Register'
 import Home from '../Products';
-import Purchase from '../Purchase'
+//import Purchase from '../Purchase'
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false)
