@@ -16,7 +16,7 @@ const ProtectedRoute = ({
           return (
             <Redirect
               to={{
-                pathname: "/home",
+                pathname: "/",
                 state: {
                   from: props.location
                 }
