@@ -1,0 +1,23 @@
+
+#barraNav{
+    width: 50vw;
+    height: 100vh;  
+    position:fixed;
+    top:3.5em;
+    left: 0;
+    background-color: black;
+    margin-left: 0%; 
+    z-index: 2; 
+}
+.listNav{
+    width: 100%;
+    height:50%;
+    color: aliceblue;
+    text-decoration: none;
+    list-style: none;
+    
+}
+.containerNavList{
+    width: 50vw;
+    height: 20vh;
+}
