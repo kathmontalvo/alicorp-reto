@@ -39,6 +39,7 @@ class Firebase {
 			this.auth.onAuthStateChanged(resolve)
 		})
   }
+  
    getProducts (){
     return useCollection(this.db.collection("productos"), {
     snapshotListenOptions: { includeMetadataChanges: true }
