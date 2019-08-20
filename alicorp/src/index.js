@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './css/App.css';
 import './css/index.css';
 import './css/carousel.css';
+import './css/principal.css';
 
 
 import App from './components/App';
