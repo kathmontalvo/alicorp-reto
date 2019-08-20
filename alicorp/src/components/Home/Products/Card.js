@@ -31,7 +31,7 @@ const Card = ({ el, add }) => {
           {btn === true && (
             <button
               type="button"
-              className="btn btn-outline-success"
+              className="btn-group btn btn-outline-success"
               onClick={() => {
                 setCounter(true)
                 setBtn(false)
@@ -39,11 +39,7 @@ const Card = ({ el, add }) => {
           )}
 
           {counter === true && (
-            <div
-              className="btn btn-success"
-            >
-              <Counter productId={el.id} add={add} />
-            </div>
+            <Counter productId={el.id} add={add} />
           )}
 
         </div>

@@ -8,7 +8,7 @@ const Section = () => {
 
     <div className="container-fluid">
       <div id="carouselExample" className="carousel slide" data-ride="carousel" data-interval="9000">
-        <div className="carousel-inner row w-100 mx-auto" role="listbox">
+        <div className="carousel-inner1 row w-100 mx-auto" role="listbox">
           <Item active='active' img="//via.placeholder.com/600x400?text=1" />
           <Item active='' img="//via.placeholder.com/600x400?text=2" />
           <Item active='' img="//via.placeholder.com/600x400?text=3" />

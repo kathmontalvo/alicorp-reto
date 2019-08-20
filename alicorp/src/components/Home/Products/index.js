@@ -15,7 +15,7 @@ const Products = ({ allProducts, category }) => {
     <div className="card-deck container mx-2 d-flex">
       <div className="row d-flex justify-content-around">
         {allProducts &&
-          allProducts.docs.filter((ele) => ele.data().category === category).map(ele =>
+          allProducts.docs.filter((ele) => ele.data().category === category).slice(0,6).map(ele =>
             (<Card el={ele} />
             )
           )}
