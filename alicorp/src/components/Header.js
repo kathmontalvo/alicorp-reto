@@ -1,46 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Header = () => (
-  <header>
-    <Link to="/">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand navbar-toggle" href="#">
-        <img
-        data-testid="imgLogo"
-        style={{ maxWidth: "20%", maxHeigth:"10%"}}
-        className="logo"
-        src="https://i.postimg.cc/3JC9pBnv/1280px-Alicorp.pnghttps://i.postimg.cc/3JC9pBnv/1280px-Alicorp.png"
-        alt="logo"
-      />
-        </a>
-        <button
-          class="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNavAltMarkup"
-          aria-controls="navbarNavAltMarkup"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon" />
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">
-              Home
-            </a>
-            <a class="nav-item nav-link" href="#">
-              Features
-            </a>
-            <a class="nav-item nav-link" href="#">
-              Pricing
-            </a>
+import "../css/header.css";
 
+const Header = () => {
+  const navBarDropDown = () => {};
+
+  return (
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="d-flex justify-content-around">
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon" />
+          </button>
+
+          <a class="navbar-brand navbar-toggler-right" href="#">
+            <img
+              data-testid="imgLogo"
+              style={{ maxWidth: "120px", maxHeigth: "100px" }}
+              className="logo d-inline-block align-top"
+              src="https://i.postimg.cc/3JC9pBnv/1280px-Alicorp.pnghttps://i.postimg.cc/3JC9pBnv/1280px-Alicorp.png"
+              alt="logo"
+            />
+          </a>
+          
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div id="barraNav">
+            <ul className="containerNavList">
+              <a className="containerNavList" href="#">
+                <li className="listNav">Home</li>
+              </a>
+              <a className="containerNavList" href="#">
+                <li className="listNav">Features</li>
+              </a>
+              <a className="containerNavList" href="#">
+                <li className="listNav">Cerrar Sesion</li>
+              </a>
+            </ul>
           </div>
         </div>
       </nav>
-    </Link>
-  </header>
-);
+    </header>
+  );
+};
 export default Header;

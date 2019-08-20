@@ -1,19 +1,46 @@
 import React from 'react';
 import Header from "../Header";
 import firebase from "../../controller/firebase";
-import Categories from '../Home/Categories';
+import Categories from './Categories/';
+import Products from './Products/';
+import Option from './Option'
 const Home = () => {
-    const [allProducts] = firebase.getProducts();
-    console.log(allProducts);
-    return(
-        <main>
-            <Header/>
-            {allProducts && <div>{allProducts.docs.map((ele)=>(
-                <div>{ele.data().precio}</div>
-            ))}</div>}
-            <Categories/>
-        </main>
-    )
+  const [allProducts] = firebase.getProducts();
+  console.log(allProducts);
+  return (
+    <main>
+      <Header />
+      <section>
+        {/* slider imgs */}
+        <div>
+          <Option name="Categorías" aClass="nav-link active" />
+          <Categories />
+        </div>
+      </section>
+      <section>
+        <div>
+          <Option name="Jabones" aClass="nav-link active" />
+          <Products allProducts={allProducts} category="Jabones"/>
+        </div>
+        <div>
+          <Option name="Pastas" aClass="nav-link active" />
+          <Products allProducts={allProducts} category="Pastas"/>
+        </div>
+        <div>
+          <Option name="Conservas" aClass="nav-link active" />
+          <Products allProducts={allProducts} category="Conservas"/>
+        </div>
+        <div>
+          <Option name="Aceites" aClass="nav-link active" />
+          <Products allProducts={allProducts} category="Aceites"/>
+        </div>
+        <div>
+          <Option name="Detergentes" aClass="nav-link active" />
+          <Products allProducts={allProducts} category="Detergentes"/>
+        </div>
+      </section>
+    </main>
+  )
 }
 
 export default Home;
