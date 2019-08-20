@@ -1,12 +1,18 @@
 
-import React from "react";
+import React, { useState } from "react";
+import Counter from './Counter';
+import Total from './Total';
 
-const Card = ({ el }) => {
+const Card = ({ el, add }) => {
+
+  const [counter, setCounter] = useState(false)
+  const [btn, setBtn] = useState(true)
+
   const float = parseFloat(el.data().precio / el.data().unid);
   const result = Math.round(float * 100) / 100;
 
   return (
-    <div className="card col-5 col-md-4 fs-13 p-0">
+    <div className="card col-5 col-md-4 fs-13 p-0" key={el.data().id}>
       <img className="card-img-top" src={el.data().img} alt="Card image cap" />
       <div className="card-body p-2">
         <p className="card-title">{el.data().name}</p>
@@ -22,10 +28,25 @@ const Card = ({ el }) => {
           </div>
         </div>
         <div className="align-center mt-2">
-          <button data-testid='takeQty' className='border-none transparent'><i className="fas fa-minus-circle blue-color"></i></button>
-          <span data-testid='qty' className='text-gray' >1</span>
-          <button data-testid='addQty' className='border-none transparent'><i className="fas fa-plus-circle blue-color"></i></button>
-        </div>  
+          {btn === true && (
+            <button
+              type="button"
+              className="btn btn-outline-success"
+              onClick={() => {
+                setCounter(true)
+                setBtn(false)
+              }}>Agregar</button>
+          )}
+
+          {counter === true && (
+            <div
+              className="btn btn-success"
+            >
+              <Counter productId={el.id} add={add} />
+            </div>
+          )}
+
+        </div>
       </div>
     </div>
   )
