@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState} from 'react';
+
 import Header from "../Header";
 import firebase from "../../controller/firebase";
 import Categories from './Categories/';
@@ -6,6 +7,11 @@ import Products from './Products/';
 import Option from './Option'
 import Principal from './Principal/Principal';
 const Home = () => {
+  const [name, setName] = useState("");
+  const [type, setType] = useState('Desayuno')
+  const [prodData, setProdData] = useState([]);
+  const [items, setItems] = useState([]);
+  const [show, setShow] = useState(true)
   const [allProducts] = firebase.getProducts();
   console.log(allProducts);
   return (
