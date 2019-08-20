@@ -3,7 +3,7 @@ import React from "react";
 
 import Contador from "../Home/Contador";
 
-const Products = ({allProducts}) => (
+const Products = ({allProducts,pedidos,setPedidos}) => (
 <>
 {allProducts && <div>{allProducts.docs.map((ele)=>(   
     <>
@@ -17,7 +17,7 @@ const Products = ({allProducts}) => (
         <p className="card-text">Precio Unitario:{((ele.data().precio)/(ele.data().unid)).toFixed()}</p>
       
       </div>
-      <Contador/>
+      <Contador pedidos={pedidos} setPedidos={setPedidos}/>
     </div>
     </div>
     

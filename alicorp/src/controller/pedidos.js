@@ -1,6 +1,6 @@
 
 export const gettingUnitPrice = (precioCompra,unidades) => {
-    return precio
+    return precioCompra /unidades;
   };
 export const gettingTotalCost = (arrPedidos) => {
   return arrPedidos.reduce((accum, obj) => {

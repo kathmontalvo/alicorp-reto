@@ -5,12 +5,13 @@ import Categories from '../Home/Categories';
 import Products from '../Home/Products';
 const Home = () => {
     const [allProducts] = firebase.getProducts();
+    const [pedidos, setPedidos] = useState([]);
     console.log(allProducts);
     return(
         <main>
             <Header/>
            <Categories/>
-            <Products allProducts={allProducts}/>
+            <Products allProducts={allProducts} setPedidos={setPedidos} pedidos={pedidos}/>
         </main>
     )
 }

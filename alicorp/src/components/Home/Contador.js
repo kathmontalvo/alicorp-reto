@@ -1,14 +1,14 @@
 import React from "react";
-
-const Contador = () => (
+import agregarPedido from '../../controller/pedidos';
+const Contador = ({pedidos,setPedidos}) => (
   <div className="col-6 table">
     <button
       className="table-cell btn-img-plus btn-none"
       type="button"
       onClick={() => {
-        // agregarPedido(producto, pedidos);
-        // setPedidos(agregarPedido(producto, pedidos));
-        // agregarPedido(producto,pedidos,setPedidos);
+        agregarPedido(producto, pedidos);
+        setPedidos(agregarPedido(producto, pedidos));
+        agregarPedido(producto,pedidos,setPedidos);
       }}
     >
       <img src="https://i.postimg.cc/t4NLbJd9/mas.png"  />
