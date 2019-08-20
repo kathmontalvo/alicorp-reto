@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import firebase from '../../controller/firebase';
+import auth from '../Routes/auth';
 
-function Login() {
+function Login(props) {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('');
   const [userId, setUserId] = useState('')
@@ -15,13 +16,17 @@ function Login() {
     userName.length !== 0 ?
       firebase.register(userName[0], email, password)
         .then(res => {
+          auth.login(() => { props.history.push("/home") })
           setErr('')
         })
         .catch(e => {
           console.log(e)
           if (e.code === 'auth/email-already-in-use') {
             setErr('Email inválido o ya en uso. Intente nuevamente.')
-          } setErr(e.message)
+          } else if (e.code ==='auth/weak-password') {
+            setErr('Ingrese contraseña de mínimo 6 caractéres.')
+          }
+          else {setErr(e.message)}
         }) :
       setErr('Es necesario que seas operario de Alicorp para ingresar a nuestra web.')
   }

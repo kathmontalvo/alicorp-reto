@@ -14,6 +14,17 @@
   margin-right: auto;
 }
 
+.align-center {
+text-align: center;
+}
+.fs-10{
+  font-size: 10px;
+}
+
+.fs-13{
+  font-size: 13px;
+}
+
 .fill-available {
   height: -webkit-fill-available;
 }
