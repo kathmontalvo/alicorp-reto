@@ -2,7 +2,7 @@
 import React,{useState} from "react";
 import Card from './Card'
 import ctrl from '../../../controller/products';
-const Products = ({ allProducts, category }) => {
+const Products = ({ allProducts, category,allOrders }) => {
   const  [orders, setOrders] = useState([]);
   const [prodData, setProdData] = useState([]);
   const mapFunc = (fn) => (id) => {
