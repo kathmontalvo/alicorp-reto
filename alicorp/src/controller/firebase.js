@@ -28,22 +28,34 @@ class Firebase {
   }
 
   async register(name, email, password) {
-    await this.auth.createUserWithEmailAndPassword(email, password)
+    // try {
+      if (name !== '') {
+        await this.auth.createUserWithEmailAndPassword(email, password)
+    //   }
+    // } catch (error) {
+    //   return error
+    // }
     return this.auth.currentUser.updateProfile({
       displayName: name
+    })}
+  }
+
+  isInitialized() {
+    return new Promise(resolve => {
+      this.auth.onAuthStateChanged(resolve)
     })
   }
-  
-  isInitialized() {
-		return new Promise(resolve => {
-			this.auth.onAuthStateChanged(resolve)
-		})
-  }
-   getProducts (){
+  getProducts() {
     return useCollection(this.db.collection("productos"), {
-    snapshotListenOptions: { includeMetadataChanges: true }
-  }); 
-}
+      snapshotListenOptions: { includeMetadataChanges: true }
+    })
+  }
+  getUserId() {
+    return useCollection(this.db.collection("users"), {
+      snapshotListenOptions: { includeMetadataChanges: true }
+    })
+  }
+
 }
 
 export default new Firebase();

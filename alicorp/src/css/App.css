@@ -1,16 +1,30 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
-.containerLogin{
-  
+
+.containerLogin {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#logo{
-  display:block;
+
+#logo {
+  display: block;
   margin-left: auto;
   margin-right: auto;
 }
 
+.fill-available {
+  height: -webkit-fill-available;
+}
 
+.border-none {
+  border: none
+}
+.border-none:focus {
+  border: none
+}
+
+.transparent {
+  background: transparent;
+}
