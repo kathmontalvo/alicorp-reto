@@ -3,11 +3,12 @@
     width: 50vw;
     height: 100vh;  
     position:fixed;
+    background-color:#fe000d;
     top:3.5em;
     left: 0;
-    background-color: black;
     margin-left: 0%; 
     z-index: 2; 
+    
 }
 
 ul{
@@ -17,17 +18,18 @@ ul{
     width: 100%;
     height:50%;
     color: aliceblue;
-    text-decoration: none;   
+    text-decoration: none;
+      
 }
 .containerNavList{
-    padding: 2em;
+    padding: .5em;
     padding-left: 0;
     width: 50vw;
-    height: 20vh;
+    height: 15vh;
     text-transform: uppercase;
 
 }
-.containerNavList li{
+.containerNavList a{
     box-shadow: -3px 0 rgba(255, 255, 255,.2);
     margin-bottom: 5px;
     padding-left: 1.5em;
@@ -35,6 +37,11 @@ ul{
     -o-transition: all .5s;
     transition: all .5s;
 }
-.containerNavList li:hover{
+.containerNavList a:hover{
     box-shadow: 15em 0 rgba(255, 255, 255,.2) inset;
 }
+.color{
+    background-color: #fe000d;
+    
+}
+
