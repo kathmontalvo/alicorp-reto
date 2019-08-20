@@ -7,41 +7,30 @@ function Login() {
   });*/
 
   return (
-    <section className="container-fluid">
-      <div>
-        <form className="containerLogin">
-          <fieldset>
-            <legend><h2>Bienvenido!!</h2></legend>
+    <div>
+      <label><h2>Bienvenido!!</h2></label>
+      <form>
+      <div className="form-group">
+    <label  className="col-sm-2 col-form-label">Email</label>
+    <div className="col-sm-10">
+      <input type="email" className="form-control" id="inputEmail3" placeholder="Email"/>
+    </div>
+  </div>
+  <div className="form-group">
+    <label className="col-sm-2 col-form-label">Password</label>
+    <div className="col-sm-10">
+      <input type="password" className="form-control" placeholder="password"/>
+    </div>
+  </div>
+  <div className="form-group row">
+    <div className="col-sm-10 offset-sm-2">
+      <button type="submit" className="btn btn-primary">Sign in</button>
+    </div>
+  </div>
+  
+</form>
 
-            <div className="form-group">
-              <label>Email address</label>
-              <input
-                type="email"
-                className="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-              />
-              <small id="emailHelp" className="form-text text-muted">
-                We'll never share your email with anyone else.
-            </small>
-            </div>
-            <div className="form-group">
-              <label >Password</label>
-              <input
-                className="form-control"
-                id="exampleInputPassword1"
-                placeholder="Password"
-              />
-            </div>
-            <button type="submit" className="btn btn-primary">
-              Iniciar Sesion
-          </button>
-          </fieldset>
-        </form>
-      </div>
-
-    </section>
+    </div>
   );
 }
 
