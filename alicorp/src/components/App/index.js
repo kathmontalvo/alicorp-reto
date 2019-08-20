@@ -4,7 +4,7 @@ import firebase from '../../controller/firebase'
 import Login from '../Login'
 import Register from '../Register'
 import Home from '../Products';
-import Purchase from '../Purchase'
+//import Purchase from '../Purchase'
 
 const App = () => {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false)
@@ -18,10 +18,10 @@ const App = () => {
 
   return firebaseInitialized !== false ? (
     <Switch>
-      <Route exact path="/login" component={Login} />
+      <Route exact path="/" component={Login} />
+      {/* <Route exact path="/login" component={Login} /> */}
       <Route exact path="/register" component={Register} />
       <Route exact path="/home" component={Home} />
-      <Route exact path="/purchase" component={Purchase} />
     </Switch>
 
   ) : <div id="loader">Loading</div>
