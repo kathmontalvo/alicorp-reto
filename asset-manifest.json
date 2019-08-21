@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/alicorp-reto/static/css/main.6b428260.chunk.css",
-    "main.js": "/alicorp-reto/static/js/main.26ef3c2d.chunk.js",
-    "main.js.map": "/alicorp-reto/static/js/main.26ef3c2d.chunk.js.map",
+    "main.css": "/alicorp-reto/static/css/main.35435fca.chunk.css",
+    "main.js": "/alicorp-reto/static/js/main.3a92fd9e.chunk.js",
+    "main.js.map": "/alicorp-reto/static/js/main.3a92fd9e.chunk.js.map",
     "runtime~main.js": "/alicorp-reto/static/js/runtime~main.ed416265.js",
     "runtime~main.js.map": "/alicorp-reto/static/js/runtime~main.ed416265.js.map",
     "static/js/2.1fdb8f12.chunk.js": "/alicorp-reto/static/js/2.1fdb8f12.chunk.js",
     "static/js/2.1fdb8f12.chunk.js.map": "/alicorp-reto/static/js/2.1fdb8f12.chunk.js.map",
     "index.html": "/alicorp-reto/index.html",
-    "precache-manifest.7f2ed060dfa07329d118346501e03ad4.js": "/alicorp-reto/precache-manifest.7f2ed060dfa07329d118346501e03ad4.js",
+    "precache-manifest.cc04a674716821d5a2ff42587c94ae0a.js": "/alicorp-reto/precache-manifest.cc04a674716821d5a2ff42587c94ae0a.js",
     "service-worker.js": "/alicorp-reto/service-worker.js",
-    "static/css/main.6b428260.chunk.css.map": "/alicorp-reto/static/css/main.6b428260.chunk.css.map"
+    "static/css/main.35435fca.chunk.css.map": "/alicorp-reto/static/css/main.35435fca.chunk.css.map"
   }
 }
