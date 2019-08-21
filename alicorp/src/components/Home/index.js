@@ -5,7 +5,7 @@ import firebase from "../../controller/firebase";
 import Categories from './Categories/';
 import Products from './Products/';
 import Orders from '../Orders';
-import Option from './Option'
+import Option from '../Option'
 import Principal from './Principal/Principal';
 const Home = () => {
 
@@ -25,7 +25,6 @@ const Home = () => {
         <div>
         </div>
         <div>
-          <Option name="Categorías" aClass="nav-link active" />
           <Categories />
         </div>
       </section>

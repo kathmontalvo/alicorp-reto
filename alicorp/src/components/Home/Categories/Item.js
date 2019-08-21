@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = ({ img }) => {
   return (
-    <div className="col-md-2 col-4">
+    <div className="col-md-2 col-4 my-2 p-0">
       <div className="box">
         <img className="d-block w-100" src={img} alt=""></img>
       </div>
