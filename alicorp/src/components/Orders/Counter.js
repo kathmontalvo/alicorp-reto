@@ -1,7 +1,7 @@
 import React from "react";
-import{ addOrder,decreasingQty} from '../../controller/Orders';
+import{ addOrder,decreasingQty,deleteProductOrder} from '../../controller/Orders';
 const Counter = ({
- order,qty,orders,setOrders
+ order,qty,orders,setOrders,product
 }) => (
   <div className="col-6 table">
     <button
@@ -18,8 +18,10 @@ const Counter = ({
       className="table-cell btn-img-plus btn-none"
       type="button"
       onClick={() => {
-        setOrders(decreasingQty(order,orders));
-      }}
+  
+     setOrders(decreasingQty(order,orders));
+    }
+      }
      
     >
       <img src="https://i.postimg.cc/XvNtYWxd/menos.png"  />

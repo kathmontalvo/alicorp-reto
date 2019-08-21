@@ -43,6 +43,9 @@ export const addOrder = (producto, arrPedidos) => {
     const newProductos = arrPedidos.filter((p) => p.id !== id);
     return newProductos;
   };
+
+
+  
   export const decreasingQty = (producto, arrPedidos) => {
     if (arrPedidos.find((p) => p.id === producto.id)) {
       // si ya lo pidio

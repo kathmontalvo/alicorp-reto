@@ -37,7 +37,7 @@ const [orders,setOrders]= useState([]);
           <Option name="Pastas" aClass="nav-link active" route="pastas" props={props}/>
           <Products allProducts={allProducts} category="Pastas" allOrders={allOrders} orders={orders} setOrders={setOrders}/>
         </div>
-        <div>
+         allProduc<div>
           <Option name="Conservas" aClass="nav-link active" route="/conservas" props={props} />
           <Products allProducts={allProducts} category="Conservas" allOrders={allOrders} orders={orders} setOrders={setOrders}/>
         </div>
@@ -50,7 +50,7 @@ const [orders,setOrders]= useState([]);
           <Products allProducts={allProducts} category="Detergentes" allOrders={allOrders} orders={orders} setOrders={setOrders}/>
         </div>
       </section>
-      
+     
      <Orders allProducts={allProducts} orders={orders} setOrders={setOrders}/>
     </main>
   )

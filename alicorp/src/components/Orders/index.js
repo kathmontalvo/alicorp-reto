@@ -25,16 +25,16 @@ const Order = ({ product,allProducts,orders,setOrders }) =>  {
              </tr>
            </thead>
            <tbody>
-       
-        
-           { orders.map((order)=>(
-<ProductDelivered product={product} order ={order}orders={orders} setOrders={setOrders} /> 
-
-            ))}    
-         
- 
-                                 
-           </tbody>
+           
+                 { orders.map((order)=>(
+                 
+                   <ProductDelivered  order ={order}orders={orders} setOrders={setOrders} /> 
+           
+                       ))
+                }
+             
+      
+       </tbody>
          </table>
          <Resume />
        </div>
