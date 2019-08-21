@@ -16,15 +16,6 @@ const Principal = () => {
           <div className="carousel-item">
             <img className="d-block w-100" src="https://i.postimg.cc/Wb4Hbhgg/Desktop-1.png" alt="Post Picture"></img>
           </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="https://i.postimg.cc/YqJzK93p/5.jpg"></img>
-          </div>
-          <div className="carousel-item">
-            <img className="d-block w-100" src="https://i.postimg.cc/FsJ0ZvQw/2.jpg" alt=""></img>
-          </div>
-            <div className="carousel-item">
-            <img className="d-block w-100" src="https://i.postimg.cc/VLyW2v4z/3.jpg" alt=""></img>
-          </div>
         </div>
         <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
           <span className="carousel-control-prev-icon" aria-hidden="true"></span>
