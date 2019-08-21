@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/alicorp-reto/precache-manifest.716f53f4ca5f9a7a586ee1287a1ddba3.js"
+  "/alicorp-reto/precache-manifest.1bdb536a6f3177090b78a400596ce356.js"
 );
 
 self.addEventListener('message', (event) => {
