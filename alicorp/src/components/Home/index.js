@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
 import Header from "../Header";
 import firebase from "../../controller/firebase";
@@ -7,44 +7,42 @@ import Products from './Products/';
 import Option from './Option'
 import Principal from './Principal/Principal';
 const Home = () => {
-  const [name, setName] = useState("");
-  const [type, setType] = useState('Desayuno')
-  const [prodData, setProdData] = useState([]);
-  const [items, setItems] = useState([]);
-  const [show, setShow] = useState(true)
+
   const [allProducts] = firebase.getProducts();
   console.log(allProducts);
   return (
     <main>
       <Header />
       <Principal />
-      <section>
+      <section className="container-fluid">
         {/* slider imgs */}
+        <div>
+        </div>
         <div>
           <Option name="Categorías" aClass="nav-link active" />
           <Categories />
         </div>
       </section>
-      <section>
+      <section className="container-fluid">
         <div>
           <Option name="Jabones" aClass="nav-link active" />
-          <Products allProducts={allProducts} category="Jabones"/>
+          <Products allProducts={allProducts} category="Jabones" />
         </div>
         <div>
           <Option name="Pastas" aClass="nav-link active" />
-          <Products allProducts={allProducts} category="Pastas"/>
+          <Products allProducts={allProducts} category="Pastas" />
         </div>
         <div>
           <Option name="Conservas" aClass="nav-link active" />
-          <Products allProducts={allProducts} category="Conservas"/>
+          <Products allProducts={allProducts} category="Conservas" />
         </div>
         <div>
           <Option name="Aceites" aClass="nav-link active" />
-          <Products allProducts={allProducts} category="Aceites"/>
+          <Products allProducts={allProducts} category="Aceites" />
         </div>
         <div>
           <Option name="Detergentes" aClass="nav-link active" />
-          <Products allProducts={allProducts} category="Detergentes"/>
+          <Products allProducts={allProducts} category="Detergentes" />
         </div>
       </section>
     </main>

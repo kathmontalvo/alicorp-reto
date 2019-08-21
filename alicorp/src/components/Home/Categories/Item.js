@@ -2,7 +2,7 @@ import React from 'react';
 
 const Item = ({active, img}) => {
   return (
-    < div className={`carousel-item col-md-3 ${active}`} >
+    < div className={`carousel-item1 col-md-3 ${active}`} >
       <div className="panel panel-default">
         <div className="panel-thumbnail">
           <a href="#" title="image 4" className="thumb">
