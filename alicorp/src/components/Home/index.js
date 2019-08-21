@@ -7,7 +7,7 @@ import Products from './Products/';
 import Orders from '../Orders';
 import Option from '../Option'
 import Principal from './Principal/Principal';
-const Home = () => {
+const Home = (props) => {
 
   const [allProducts] = firebase.getProducts();
   const [allOrders] = firebase.getOrders();
@@ -25,7 +25,7 @@ const [orders,setOrders]= useState([]);
         <div>
         </div>
         <div>
-          <Categories />
+          <Categories props={props} />
         </div>
       </section>
       <section className="container-fluid">

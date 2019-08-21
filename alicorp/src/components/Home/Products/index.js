@@ -11,7 +11,7 @@ const Products = ({ allProducts, category,allOrders,orders,setOrders }) => {
   console.log(orders);
   return (
     <div className="mx-2 d-flex">
-      <div className="flex-wrap d-flex justify-content-around">
+      <div className="flex-wrap d-flex justify-content-between">
         {allProducts &&
           allProducts.docs.filter((ele) => ele.data().category === category).slice(0,4).map(ele =>
             (<Card el={ele}  setOrders={setOrders} orders={orders} />
