@@ -5,13 +5,12 @@
 }
 
 #myCarousel {
-  margin-bottom: 4rem;
-  padding-top: 3rem;
+  margin-bottom: 1rem;
+  padding-top: 7rem;
 }
 
 .carousel-item {
-  height: 34rem;
-  /*background-color: #bebebe;*/
+  height: 1rem;
   background-color: transparent;
 }
 
@@ -26,42 +25,42 @@
 /* --- EXtra small devices like phones - less than 360px --- */
 @media (max-width: 359.9px) {
   .carousel-item {
-    height: 8rem;
+    height: 15rem;
   }
 }
 
 /* --- Small devices like phones - starting at 360px ---*/
 @media (min-width: 360px) {
   .carousel-item {
-    height: 12rem;
+    height: 25rem;
   }
 }
 
 /* --- Medium devices like tablets - starting at 600px ---*/
 @media (min-width: 600px) {
   .carousel-item {
-    height: 20rem;
+    height: 35rem;
   } 
 }
 
 /* --- Medium devices like tablets - starting at 758px ---*/
 @media (min-width: 758px) {
   .carousel-item {
-    height: 24rem;
+    height: 45rem;
   } 
 }
 
 /* --- Tablets, Laptops - starting at 1024px ---*/
 @media (min-width: 1024px) {
   .carousel-item {
-    height: 28rem;
+    height: 65rem;
   }
 }
 
 /* --- Tablets, Laptops - starting at 1280px ---*/
 @media (min-width: 1280px) {
   .carousel-item {
-    height: 24rem;
+    height: 75rem;
   }
 }
 

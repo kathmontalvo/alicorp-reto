@@ -23,17 +23,19 @@ function Login(props) {
           console.log(e)
           if (e.code === 'auth/email-already-in-use') {
             setErr('Email inválido o ya en uso. Intente nuevamente.')
-          } else if (e.code ==='auth/weak-password') {
+          } else if (e.code === 'auth/weak-password') {
             setErr('Ingrese contraseña de mínimo 6 caractéres.')
           }
-          else {setErr(e.message)}
+          else { setErr(e.message) }
         }) :
       setErr('Es necesario que seas operario de Alicorp para ingresar a nuestra web.')
   }
   return (
     <section className="fill-available d-flex align-items-center justify-content-center">
       <div>
-        <label><h2><img className="logoInicio" src="https://i.postimg.cc/Mp6PrXKv/logo.jpg" alt=""></img></h2></label>
+        <label>
+          <h2 className="align-center">
+            <img src="https://i.ibb.co/PxNt1Dg/1280px-Alicorp.png" alt="1280px-Alicorp" border="0" className="logoInicio" />       </h2></label>
         <form onSubmit={sendForm}>
           <div className="form-group">
             <label className="col-sm-2 col-form-label mb-0">ID
@@ -44,30 +46,30 @@ function Login(props) {
             <small className="col-sm-2">Ingresar aquí el código de trabajador</small>
           </div>
           <div className="form-group">
-            <label className="col-sm-2 col-form-label">Email</label>
+            <label className="col-sm-2 col-form-label">Correo electrónico</label>
             <div className="col-sm-10">
               <input type="email" className="form-control" id="inputEmail3" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} />
             </div>
           </div>
           <div className="form-group">
-            <label className="col-sm-2 col-form-label">Password</label>
+            <label className="col-sm-2 col-form-label">contraseña</label>
             <div className="col-sm-10">
               <input type="password" className="form-control" placeholder="password" value={password} onChange={(e) => setPassword(e.target.value)} />
             </div>
           </div>
           <div className="form-group">
-            <div className="col-sm-10 offset-sm-2">
-              <button type="submit" className="btn btn-primary">Registrarme</button>
+            <div className="col-sm-10 offset-sm-2 align-center m-2">
+              <button type="submit" className="btn btn-success">Registrarme</button>
             </div>
           </div>
           {err && (
             <div className="form-group">
               <p className="col-sm-10"> {err}</p>
             </div>)}
+          <div className="form-group">
+            <p className="col-sm-10 align-center">¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></p>
+          </div>
         </form>
-        <div>
-          <p>¿Ya tienes una cuenta? <a href="#">Inicia sesión</a></p>
-        </div>
       </div>
 
     </section>
