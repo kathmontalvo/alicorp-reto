@@ -15,7 +15,6 @@ const Products = ({allProducts,pedidos,setPedidos}) => (
         <p className="card-text">Precio:{ele.data().precio}</p>
         <p className="card-text">Precio Sugerido:{ele.data()["price-suggested"]}</p>
         <p className="card-text">Precio Unitario:{((ele.data().precio)/(ele.data().unid)).toFixed()}</p>
-      
       </div>
       <Contador pedidos={pedidos} setPedidos={setPedidos}/>
     </div>
