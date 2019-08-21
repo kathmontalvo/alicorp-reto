@@ -4,8 +4,8 @@ import Header from "../Header";
 import firebase from "../../controller/firebase";
 import Categories from './Categories/';
 import Products from './Products/';
-import Orders from '../Orders';
-import Option from '../Option'
+import Orders from '../Orders/index';
+import Option from './Option'
 import Principal from './Principal/Principal';
 const Home = (props) => {
 
@@ -50,7 +50,7 @@ const [orders,setOrders]= useState([]);
           <Products allProducts={allProducts} category="Detergentes" allOrders={allOrders} orders={orders} setOrders={setOrders}/>
         </div>
       </section>
-     <Orders allOrders={allOrders} orders={orders} setOrders={setOrders}/>
+     <Orders allProducts={allProducts} orders={orders} setOrders={setOrders}/>
     </main>
   )
 }
