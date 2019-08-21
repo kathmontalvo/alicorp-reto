@@ -1,22 +1,24 @@
 import React from "react";
 import Counter from "./Counter";
-
-const ProductoDelivered = ({pedido
+import{ addOrder,deleteProductOrder} from '../../controller/Orders';
+const ProductoDelivered = ({order,orders ,setOrders
  
 }) => (
   <tr>
     <td>
-{pedido.name}
+{order.name}
     </td>
-    <td>{pedido.precio}</td>
+    <td>{order.precio}</td>
     <td>producto.price-suggested</td>
-    <td>    <Counter qty={pedido.qty}/></td>
+    <td>    <Counter qty={order.qty} order={order} orders={orders} setOrders ={setOrders}/></td>
     <td>producto.gananancia</td>
-     <td>{pedido.costo}</td>
+     <td>{order.costo}</td>
     <td>
       <button
       className="btn-none"
+      type="button"
         onClick={() => {
+          setOrders(deleteProductOrder(order,orders));
          
         }}
       >
