@@ -31,6 +31,7 @@ const Header = ({props}) => {
           </a>
           <a className="navbar-brand" href="#">
             <i className="fas fa-shopping-cart" />
+            <p> 5</p>
           </a>
         </div>
 

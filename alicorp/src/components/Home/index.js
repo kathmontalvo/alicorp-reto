@@ -50,6 +50,7 @@ const [orders,setOrders]= useState([]);
           <Products allProducts={allProducts} category="Detergentes" allOrders={allOrders} orders={orders} setOrders={setOrders}/>
         </div>
       </section>
+      
      <Orders allProducts={allProducts} orders={orders} setOrders={setOrders}/>
     </main>
   )

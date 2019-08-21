@@ -4,12 +4,11 @@ import ProductDelivered from "./ProductDelivered";
 import Total from "./Total";
 import Resume from "./Resume";
 
-const Order = ({ allProducts,orders,setOrders }) =>  {
+const Order = ({ product,allProducts,orders,setOrders }) =>  {
   return (
   
       <form   >     
-      {allProducts && allProducts.docs.map((ele)=>(
-ele &&(<div>         
+    <div>         
  <div>
    <div className="text-black" style={{ maxWidth: "100%" }}>
      <div className="card-body">
@@ -26,10 +25,15 @@ ele &&(<div>
              </tr>
            </thead>
            <tbody>
-             {orders.map((order)=>(
-order.qty>0 ? <ProductDelivered product={ele.data()} order ={order}orders={orders} setOrders={setOrders} /> 
-:""))
-}                                       
+       
+        
+           { orders.map((order)=>(
+<ProductDelivered product={product} order ={order}orders={orders} setOrders={setOrders} /> 
+
+            ))}    
+         
+ 
+                                 
            </tbody>
          </table>
          <Resume />
@@ -38,14 +42,10 @@ order.qty>0 ? <ProductDelivered product={ele.data()} order ={order}orders={order
    </div>
  </div>
 
-</div>)
-
-      ))} 
+</div>  
  
-   </form>
- )
+   </form>   
    
-   
-}
+  )}
 export default Order;
 
