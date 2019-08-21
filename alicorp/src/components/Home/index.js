@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 
 import Header from "../Header";
 import firebase from "../../controller/firebase";
@@ -6,6 +6,7 @@ import Categories from './Categories/';
 import Products from './Products/';
 import Orders from '../Orders';
 import Option from './Option'
+import Principal from './Principal/Principal';
 const Home = () => {
 
   const [allProducts] = firebase.getProducts();
@@ -18,14 +19,17 @@ const Home = () => {
   return (
     <main>
       <Header />
-      <section>
+      <Principal />
+      <section className="container-fluid">
         {/* slider imgs */}
+        <div>
+        </div>
         <div>
           <Option name="Categorías" aClass="nav-link active" />
           <Categories />
         </div>
       </section>
-      <section>
+      <section className="container-fluid">
         <div>
           <Option name="Jabones" aClass="nav-link active" />
           <Products allProducts={allProducts} category="Jabones"  allOrders={allOrders}/>
