@@ -1,7 +1,7 @@
 import React from "react";
 import Counter from "./Counter";
 import{ addOrder,deleteProductOrder} from '../../controller/Orders';
-const ProductoDelivered = ({order,orders ,setOrders
+const ProductoDelivered = ({product,order,orders ,setOrders
  
 }) => (
   <tr>
@@ -18,7 +18,7 @@ const ProductoDelivered = ({order,orders ,setOrders
       className="btn-none"
       type="button"
         onClick={() => {
-          setOrders(deleteProductOrder(order,orders));
+          setOrders(deleteProductOrder(product.id,orders));
          
         }}
       >
