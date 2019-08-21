@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import Counter from './Counter';
 import Total from './Total';
+import {addOrder,decreasingQty} from '../../../controller/Orders';
 
 const Card = ({ el, setOrders,orders}) => {
 
@@ -35,6 +36,8 @@ const Card = ({ el, setOrders,orders}) => {
               onClick={() => {
                 setCounter(true)
                 setBtn(false)
+               setOrders(addOrder(el.data(),orders));
+                
               }}>Agregar</button>
           )}
 
@@ -42,7 +45,7 @@ const Card = ({ el, setOrders,orders}) => {
             <div
               className="btn btn-success w-100"
             >
-              <Counter productId={el.data().id} setOrders={setOrders} orders={orders} />
+              <Counter product={el.data()} setOrders={setOrders} orders={orders} />
             </div>
           )}
 

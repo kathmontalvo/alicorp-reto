@@ -4,12 +4,10 @@ import ProductDelivered from "./ProductDelivered";
 import Total from "./Total";
 import Resume from "./Resume";
 
-const Order = ({ pedidos }) => {
+const Order = ({ allOrders,orders,setOrders }) => {
   return (
-    <form   >
-      {pedidos && (
-        <div>
-          {pedidos.docs.map((p) => (
+    <form   >     
+        <div>         
             <div>
               <div className="text-black" style={{ maxWidth: "100%" }}>
                 <div className="card-body">
@@ -26,10 +24,10 @@ const Order = ({ pedidos }) => {
                         </tr>
                       </thead>
                       <tbody>
-                        {p.data().orders.map((pedido)=>
-
-                        (  <ProductDelivered pedido={pedido} /> )
-                        )}                      
+                        {orders.map((order)=>(
+ order.qty>0 ? <ProductDelivered  order ={order}orders={orders} setOrders={setOrders} /> 
+ :""))
+ }                                       
                       </tbody>
                     </table>
                     <Resume />
@@ -37,10 +35,9 @@ const Order = ({ pedidos }) => {
                 </div>
               </div>
             </div>
-          )
-          )}
+     
         </div>
-      )}
+  
     </form>
   )
 }

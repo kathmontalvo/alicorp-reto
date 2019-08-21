@@ -57,7 +57,7 @@ class Firebase {
       snapshotListenOptions: { includeMetadataChanges: true }
     })
   }
-  addOrder(el) {
+  addOrderToFirebase(el) {
     return this.db.collection("pedidos").add(el).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
     
