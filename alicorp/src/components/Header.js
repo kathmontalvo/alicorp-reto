@@ -28,8 +28,44 @@ const Header = () => {
             alt="logo"
           />
         </a>
+        <a className="navbar-brand" href="#">
+          <i className="fas fa-shopping-cart" />
+        </a>
 
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+        <form className="form-inline my-2 my-lg-0">
+          <input
+            className="form-control mr-sm-2 form-size "
+            type="text"
+            placeholder="Search"
+            aria-label="Search"
+          />
+          <button
+            className="btn btn-outline-success my-2 my-sm-0 "
+            type="submit"
+          >
+            Search
+          </button>
+        </form>
+
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">
+              Home <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              Link
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">
+              Disabled
+            </a>
+          </li>
+        </ul>
+
+        <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div id="barraNav" className="d-sm-block d-md-none">
             <ul className="nav d-xl-block">
               <li className="nav-item containerNavList">
@@ -37,20 +73,19 @@ const Header = () => {
                   Active
                 </a>
               </li>
-              <li class="nav-item containerNavList">
-                <a class="nav-link listNav" href="#!">
+              <li className="nav-item containerNavList">
+                <a className="nav-link listNav" href="#">
                   Link
                 </a>
-                
               </li>
-              <li class="nav-item containerNavList">
-                <a class="nav-link active listNav" href="#">
+              <li className="nav-item containerNavList">
+                <a className="nav-link active listNav" href="#">
                   Active
                 </a>
               </li>
-              
-              <li class="nav-item containerNavList">
-                <a class="nav-link listNav" href="#!">
+
+              <li className="nav-item containerNavList">
+                <a className="nav-link listNav" href="#">
                   Cerrar Sesion
                 </a>
               </li>
