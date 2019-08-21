@@ -72,10 +72,10 @@ const Header = ({props}) => {
             <ul className="nav d-xl-block">
               <List name="Inicio" props={props} route="/home"/>
               <List name="Catálogo" props={props} route="/catalogue" />
-              <List name="Carrito" />
+              <List name="Carrito" props={props} route="/carrito" />
               <List name="Perfil" props={props} route="/profile"/>
-              <List name="Historial de compras" />
-              <List name="Historial de ventas" />
+              <List name="Historial de compras" props={props} route="/purchase" />
+              <List name="Historial de ventas" props={props} route="/selling" />
               <List name="Cerrar sesión" props={props} route="/login"/>
             </ul>
           </div>

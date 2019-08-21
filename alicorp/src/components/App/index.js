@@ -10,7 +10,10 @@ import Pastas from '../Catalogue/Pastas'
 import Conservas from '../Catalogue/Conservas'
 import Jabones from '../Catalogue/Jabones'
 import Detergentes from '../Catalogue/Detergentes'
+import PurchaseHistory from '../PurchaseHistory';
+import SellingHistory from '../SellingHistory';
 import ProtectedRoute from '../Routes/PrivateRoute'
+import Profile from '../Profile'
 
 
 const App = () => {
@@ -35,8 +38,9 @@ const App = () => {
       <ProtectedRoute exact path="/conservas" component={Conservas} />
       <ProtectedRoute exact path="/pastas" component={Pastas} />
       <ProtectedRoute exact path="/jabones" component={Jabones} />
-
-
+      <ProtectedRoute exact path="/purchase" component={PurchaseHistory} />
+      <ProtectedRoute exact path="/selling" component={SellingHistory} />
+      <ProtectedRoute exact path="/profile" component={Profile} />
     </Switch>
 
   ) : <div id="loader">Loading</div>
