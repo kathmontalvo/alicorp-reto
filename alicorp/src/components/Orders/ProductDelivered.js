@@ -1,32 +1,23 @@
 import React from "react";
-import Contador from "./Counter";
+import Counter from "./Counter";
 
-const Producto = ({
-  producto,
-  eliminarProducto,
-  agregarPedido,
-  disminuirCntd,
-  pedidos,
-  setPedidos,
+const ProductoDelivered = ({pedido
+ 
 }) => (
   <tr>
     <td>
-      <Contador
-        producto={producto}
-        agregarPedido={agregarPedido}
-        disminuirCntd={disminuirCntd}
-        eliminarProducto={eliminarProducto}
-        pedidos={pedidos}
-        setPedidos={setPedidos}
-      />
+{pedido.name}
     </td>
-    <td>{producto.name}</td>
-    <td>${producto.costo}</td>
+    <td>{pedido.precio}</td>
+    <td>producto.price-suggested</td>
+    <td>    <Counter qty={pedido.qty}/></td>
+    <td>producto.gananancia</td>
+     <td>{pedido.costo}</td>
     <td>
       <button
       className="btn-none"
         onClick={() => {
-          setPedidos(eliminarProducto(producto.id, pedidos));
+         
         }}
       >
         <img src="https://i.postimg.cc/pdd1tZXB/delete.png" className="btn-img-delete"/>
@@ -34,4 +25,4 @@ const Producto = ({
     </td>
   </tr>
 );
-export default Producto;
+export default ProductoDelivered;

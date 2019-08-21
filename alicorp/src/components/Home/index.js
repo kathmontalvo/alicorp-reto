@@ -7,15 +7,14 @@ import Products from './Products/';
 import Orders from '../Orders';
 import Option from './Option'
 const Home = () => {
-  const [name, setName] = useState("");
-  const [type, setType] = useState('Desayuno')
-  const [prodData, setProdData] = useState([]);
-  const [items, setItems] = useState([]);
-  const [show, setShow] = useState(true)
+
   const [allProducts] = firebase.getProducts();
   const [allOrders] = firebase.getOrders();
- //  console.log(allProducts);
+
+  
+  console.log(allProducts);
   console.log(allOrders);
+ 
   return (
     <main>
       <Header />

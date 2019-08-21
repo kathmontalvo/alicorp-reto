@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Counter from './Counter';
 import Total from './Total';
 
-const Card = ({ el, add }) => {
+const Card = ({ el, setOrders,orders}) => {
 
   const [counter, setCounter] = useState(false)
   const [btn, setBtn] = useState(true)
@@ -42,7 +42,7 @@ const Card = ({ el, add }) => {
             <div
               className="btn btn-success"
             >
-              <Counter productId={el.id} add={add} />
+              <Counter productId={el.data().id} setOrders={setOrders} orders={orders} />
             </div>
           )}
 

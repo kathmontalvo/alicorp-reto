@@ -1,6 +1,6 @@
 import React from "react";
 
-const Counter = ({productId,add}) => {
+const Counter = ({productId,setOrders,orders}) => {
  
   return (
     <div >
