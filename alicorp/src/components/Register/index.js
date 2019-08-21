@@ -33,7 +33,7 @@ function Login(props) {
   return (
     <section className="fill-available d-flex align-items-center justify-content-center">
       <div>
-        <label><h2>Registro</h2></label>
+        <label><h2><img className="logoInicio" src="https://i.postimg.cc/Mp6PrXKv/logo.jpg" alt=""></img></h2></label>
         <form onSubmit={sendForm}>
           <div className="form-group">
             <label className="col-sm-2 col-form-label mb-0">ID

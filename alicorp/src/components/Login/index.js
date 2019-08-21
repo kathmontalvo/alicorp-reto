@@ -28,8 +28,7 @@ function Login(props) {
   return (
     <section className="fill-available d-flex align-items-center justify-content-center">
       <div className="containterLogin">
-
-        <h2>Bienvenido</h2>
+        <h2><img className="logoInicio" src="https://i.postimg.cc/Mp6PrXKv/logo.jpg" alt=""></img></h2>
         <form onSubmit={sendForm}>
           <div className="form-group">
             <label className="col-sm-2 col-form-label">Email</label>
