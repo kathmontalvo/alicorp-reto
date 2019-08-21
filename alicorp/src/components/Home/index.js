@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Header from "../Header/";
+import Header from "../Header";
 import firebase from "../../controller/firebase";
 import Categories from './Categories/';
 import Products from './Products/';
