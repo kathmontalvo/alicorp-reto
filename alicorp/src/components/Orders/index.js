@@ -10,35 +10,31 @@ const Order = ({ product,allProducts,orders,setOrders }) =>  {
       <form   >     
     <div>         
  <div>
-   <div className="text-black" style={{ maxWidth: "100%" }}>
-     <div className="card-body">
-       <div>
+   <div className="text-black" style={{ maxWidth: "50%" }}>
+
          <table className="table table-sm">
            <thead>
              <tr>
                <th scope="col">Producto</th>
                <th scope="col">Precio</th>
-               <th scope="col">Precio  de Venta Sugerido</th>
                <th scope="col">Cantidad</th>
-               <th scope="col">Ganancia</th>
                <th scope="col"> Total</th>
              </tr>
            </thead>
            <tbody>
-       
-        
-           { orders.map((order)=>(
-<ProductDelivered product={product} order ={order}orders={orders} setOrders={setOrders} /> 
-
-            ))}    
-         
- 
-                                 
-           </tbody>
+           
+                 { orders.map((order)=>(
+                 
+                   <ProductDelivered  order ={order}orders={orders} setOrders={setOrders} /> 
+           
+                       ))
+                }
+             
+      
+       </tbody>
          </table>
          <Resume />
-       </div>
-     </div>
+
    </div>
  </div>
 

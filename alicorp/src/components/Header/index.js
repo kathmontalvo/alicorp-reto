@@ -29,10 +29,9 @@ const Header = ({props}) => {
               alt="logo"
             />
           </a>
-          <a className="navbar-brand" href="#">
-            <i className="fas fa-shopping-cart" />
-            <p> 5</p>
-          </a>
+          <a className="navbar-brand" href="#">           
+            <div> <i className="fas fa-shopping-cart" /> <p> 5</p></div>
+           </a>
         </div>
 
         <form className="w-100 d-flex justify-content-between form-inline my-2 my-lg-0">
