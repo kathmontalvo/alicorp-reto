@@ -2,27 +2,32 @@
 import React,{useState} from "react";
 import Card from './Card'
 import ctrl from '../../../controller/products';
+import Orders from '../../Orders/index';
 
-const Products = ({ allProducts, category,allOrders }) => {
-  const  [orders, setOrders] = useState([]);
+const Products = ({ allProducts, category,allOrders,orders,setOrders }) => {
+ 
   const mapFunc = (fn) => (id) => {
     setOrders(fn(orders, id))
   };
   console.log(orders);
-  const increase = mapFunc(ctrl.increase)
-  const decrease = mapFunc(ctrl.decrease)
-  const remove = mapFunc(ctrl.delete)
   return (
+    <>
     <div className="mx-2 d-flex">
-      <div className="flex-wrap d-flex justify-content-around">
+      <div className="flex-wrap d-flex justify-content-between">
         {allProducts &&
-          allProducts.docs.filter((ele) => ele.data().category === category).map(ele =>
-            (<Card el={ele}  setOrders={setOrders} orders={orders} />
+          allProducts.docs.filter((ele) => ele.data().category === category).slice(0,4).map(ele =>
+            (<>
+              
+            <Card el={ele}  setOrders={setOrders} orders={orders} />
+            
+              </>
             )
           )}
       </div>
 
     </div>
+  
+    </>
   )
 };
 export default Products;
