@@ -10,7 +10,7 @@ const Order = ({ product,allProducts,orders,setOrders }) =>  {
       <form   >     
     <div>         
  <div>
-   <div className="text-black" style={{ maxWidth: "100%" }}>
+   <div className="text-black" style={{ maxWidth: "50%" }}>
      <div className="card-body">
        <div>
          <table className="table table-sm">
