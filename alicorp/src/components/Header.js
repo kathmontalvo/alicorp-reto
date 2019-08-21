@@ -32,7 +32,7 @@ const Header = () => {
           <i className="fas fa-shopping-cart" />
         </a>
 
-        <form className="form-inline my-2 my-lg-0">
+        <form className="form-inline my-2 my-lg-0 m-0">
           <input
             className="form-control mr-sm-2 form-size "
             type="text"
@@ -40,14 +40,14 @@ const Header = () => {
             aria-label="Search"
           />
           <button
-            className="btn btn-outline-success my-2 my-sm-0 "
+            className="btn btn-success my-2 my-sm-0 ml-2"
             type="submit"
           >
             Search
           </button>
         </form>
 
-        <ul class="navbar-nav mr-auto">
+        {/* <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
             <a class="nav-link" href="#">
               Home <span class="sr-only">(current)</span>
@@ -63,7 +63,7 @@ const Header = () => {
               Disabled
             </a>
           </li>
-        </ul>
+        </ul> */}
 
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div id="barraNav" className="d-sm-block d-md-none">
