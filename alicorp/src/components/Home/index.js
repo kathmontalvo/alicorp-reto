@@ -14,7 +14,7 @@ const Home = () => {
     <main>
       <Header />
       <Principal />
-      <section>
+      <section className="container-fluid">
         {/* slider imgs */}
         <div>
         </div>
@@ -23,7 +23,7 @@ const Home = () => {
           <Categories />
         </div>
       </section>
-      <section>
+      <section className="container-fluid">
         <div>
           <Option name="Jabones" aClass="nav-link active" />
           <Products allProducts={allProducts} category="Jabones" />

@@ -12,8 +12,8 @@ const Products = ({ allProducts, category }) => {
   const decrease = mapFunc(ctrl.decrease)
   const remove = mapFunc(ctrl.delete)
   return (
-    <div className="card-deck container mx-2 d-flex">
-      <div className="row d-flex justify-content-around">
+    <div className="card-deck mx-2 d-flex">
+      <div className="flex-wrap d-flex justify-content-around">
         {allProducts &&
           allProducts.docs.filter((ele) => ele.data().category === category).slice(0,6).map(ele =>
             (<Card el={ele} />
