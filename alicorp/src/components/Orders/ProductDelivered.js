@@ -14,16 +14,7 @@ const ProductoDelivered = ({product,order,orders ,setOrders
     <td>s/.20</td>
      <td>{order.costo}</td>
     <td>
-      <button
-      className="btn-none"
-      type="button"
-        onClick={() => {
-          setOrders(deleteProductOrder(order.id,orders));
-         
-        }}
-      >
-        <img src="https://i.postimg.cc/pdd1tZXB/delete.png" className="btn-img-delete"/>
-      </button>
+     
     </td>
   </tr>
 );
