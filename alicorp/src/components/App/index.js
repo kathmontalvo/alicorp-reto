@@ -10,7 +10,7 @@ import Pastas from '../Catalogue/Pastas'
 import Conservas from '../Catalogue/Conservas'
 import Jabones from '../Catalogue/Jabones'
 import Detergentes from '../Catalogue/Detergentes'
-
+import ProtectedRoute from '../Routes/PrivateRoute'
 
 
 const App = () => {
@@ -26,15 +26,15 @@ const App = () => {
   return firebaseInitialized !== false ? (
     <Switch>
       <Route exact path="/" component={Login} />
-      {<Route exact path="/login" component={Login} />}
+      <Route exact path="/login" component={Login} />
       <Route exact path="/register" component={Register} />
-      <Route exact path="/home" component={Home} />
-      <Route exact path="/catalogue" component={Catalogue} />
-      <Route exact path="/aceites" component={Aceites} />
-      <Route exact path="/detergentes" component={Detergentes} />
-      <Route exact path="/conservas" component={Conservas} />
-      <Route exact path="/pastas" component={Pastas} />
-      <Route exact path="/jabones" component={Jabones} />
+      <ProtectedRoute exact path="/home" component={Home} />
+      <ProtectedRoute exact path="/catalogue" component={Catalogue} />
+      <ProtectedRoute exact path="/aceites" component={Aceites} />
+      <ProtectedRoute exact path="/detergentes" component={Detergentes} />
+      <ProtectedRoute exact path="/conservas" component={Conservas} />
+      <ProtectedRoute exact path="/pastas" component={Pastas} />
+      <ProtectedRoute exact path="/jabones" component={Jabones} />
 
 
     </Switch>

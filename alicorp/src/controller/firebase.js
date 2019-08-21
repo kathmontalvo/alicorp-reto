@@ -42,6 +42,9 @@ class Firebase {
       this.auth.onAuthStateChanged(resolve)
     })
   }
+  activeUser() {
+    return this.auth.currentUser
+  }
   getProducts() {
     return useCollection(this.db.collection("productos"), {
       snapshotListenOptions: { includeMetadataChanges: true }
@@ -60,10 +63,10 @@ class Firebase {
   addOrderToFirebase(el) {
     return this.db.collection("pedidos").add(el).then((docRef) => {
       console.log("Document written with ID: ", docRef.id);
-    
+
     });
   }
-  
+
 
 }
 

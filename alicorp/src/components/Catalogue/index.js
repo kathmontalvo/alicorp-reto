@@ -9,7 +9,7 @@ const Catalogue = (props) => {
 
   return (
     <>
-      <Header />
+      <Header props={props} />
       <main className="main-relative">
         <nav aria-label="breadcrumb">
           <ol className="breadcrumb">

@@ -1,9 +1,9 @@
 import React from "react";
 //import { Link } from "react-router-dom";
+import List from './List'
+import "../../css/header.css";
 
-import "../css/header.css";
-
-const Header = () => {
+const Header = ({props}) => {
   return (
     <header>
       <nav className="navbar navbar-expand-md navbar-dark color fixed-top">
@@ -70,27 +70,13 @@ const Header = () => {
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
           <div id="barraNav" className="d-sm-block d-md-none">
             <ul className="nav d-xl-block">
-              <li className="nav-item containerNavList">
-                <a className="nav-link active listNav" href="#">
-                  Active
-                </a>
-              </li>
-              <li className="nav-item containerNavList">
-                <a className="nav-link listNav" href="#">
-                  Link
-                </a>
-              </li>
-              <li className="nav-item containerNavList">
-                <a className="nav-link active listNav" href="#">
-                  Active
-                </a>
-              </li>
-
-              <li className="nav-item containerNavList">
-                <a className="nav-link listNav" href="#">
-                  Cerrar Sesion
-                </a>
-              </li>
+              <List name="Inicio" props={props} route="/home"/>
+              <List name="Catálogo" props={props} route="/catalogue" />
+              <List name="Carrito" />
+              <List name="Perfil" props={props} route="/profile"/>
+              <List name="Historial de compras" />
+              <List name="Historial de ventas" />
+              <List name="Cerrar sesión" props={props} route="/login"/>
             </ul>
           </div>
         </div>

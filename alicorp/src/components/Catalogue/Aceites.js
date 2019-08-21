@@ -4,13 +4,13 @@ import Ruta from './utils/Breadcrumb.js'
 import Products from './utils/Products.js'
 import firebase from "../../controller/firebase";
 
-const Aceites = () => {
+const Aceites = (props) => {
   const [allProducts] = firebase.getProducts();
   const [allOrders] = firebase.getOrders();
   const [orders, setOrders] = useState([]);
   return (
     <>
-      <Header />
+      <Header props={props} />
       <main className="main-relative">
         <Ruta category="Aceites" />
         <Products allProducts={allProducts} category="Aceites" orders={orders} setOrders={setOrders} />
