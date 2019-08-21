@@ -1,10 +1,8 @@
 
 import React, { useState } from "react";
 import Card from '../../Home/Products/Card'
-import firebase from "../../controller/firebase";
 
-const Products = ({ category }) => {
-  const [allProducts] = firebase.getProducts();
+const Products = ({ allProducts, category, setOrders, orders }) => {
 
   return (
     <div className="mx-2 d-flex">

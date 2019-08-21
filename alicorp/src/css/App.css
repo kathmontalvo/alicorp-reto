@@ -25,6 +25,10 @@ top: 45px;
 .fs-13{
   font-size: 13px;
 }
+.main-relative{
+  position: relative;
+    top: 140px;
+}
 
 .fill-available {
   height: -webkit-fill-available;
