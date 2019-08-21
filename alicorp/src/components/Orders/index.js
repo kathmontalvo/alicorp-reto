@@ -11,16 +11,13 @@ const Order = ({ product,allProducts,orders,setOrders }) =>  {
     <div>         
  <div>
    <div className="text-black" style={{ maxWidth: "50%" }}>
-     <div className="card-body">
-       <div>
+
          <table className="table table-sm">
            <thead>
              <tr>
                <th scope="col">Producto</th>
                <th scope="col">Precio</th>
-               <th scope="col">Precio  de Venta Sugerido</th>
                <th scope="col">Cantidad</th>
-               <th scope="col">Ganancia</th>
                <th scope="col"> Total</th>
              </tr>
            </thead>
@@ -37,8 +34,7 @@ const Order = ({ product,allProducts,orders,setOrders }) =>  {
        </tbody>
          </table>
          <Resume />
-       </div>
-     </div>
+
    </div>
  </div>
 
